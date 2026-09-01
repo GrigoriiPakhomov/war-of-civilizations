@@ -146,7 +146,7 @@ public class World {
      * @param bonus бонус
      */
     public synchronized void logBonus(String civilizationName, Bonus bonus) {
-        logMessage(civilizationName + " получила бонус " + bonus);
+        logMessage(civilizationName + " получила бонус: " + bonus.getDescription());
     }
 
     /**
