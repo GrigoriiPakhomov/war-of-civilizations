@@ -2,6 +2,7 @@ package app.model.cell;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 import lombok.ToString;
 
 /**
@@ -9,25 +10,13 @@ import lombok.ToString;
  */
 @Getter
 @ToString
+@RequiredArgsConstructor
 @EqualsAndHashCode(of = {"x", "y"})
 public class Cell {
     private final int x;
     private final int y;
     private final CellType type;
     private String civilizationName;
-
-    /**
-     * Создаёт клетку мира.
-     *
-     * @param x координата X
-     * @param y координата Y
-     * @param type тип клетки
-     */
-    public Cell(int x, int y, CellType type) {
-        this.x = x;
-        this.y = y;
-        this.type = type;
-    }
 
     /**
      * Проверяет, является ли клетка проходимой.
